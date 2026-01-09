@@ -22,51 +22,7 @@
 
 ---
 
-## Entregáveis
-
-### Repositórios Git
-
-**Requisitos:**
-- 4 repositórios separados com código, CI/CD e instruções claras no README.md
-- Todos os repositórios devem incluir:
-  - Dockerfiles (quando aplicável)
-  - Pipelines de CI/CD funcionais
-  - Links para os deploys ativos (se aplicável)
-
-### README.md (em cada repositório)
-
-Cada repositório deve conter:
-- Descrição clara do propósito
-- Tecnologias utilizadas
-- Passos para execução e deploy
-- Diagrama da arquitetura específica daquele repositório
-- Link para o Swagger/Postman das APIs
-
-### Vídeo de Demonstração
-
-**Formato:**
-- Upload no YouTube ou Vimeo (público ou não listado)
-- Duração: até 15 minutos
-
-**Conteúdo:**
-- Autenticação com CPF
-- Execução da pipeline CI/CD
-- Deploy automatizado
-- Consumo das APIs protegidas
-- Dashboard de monitoramento com análise ao vivo
-- Logs e traces em execução
-
-### Entrega no Portal do Aluno
-
-**Documento PDF único contendo:**
-- Links dos 4 repositórios
-- Link do vídeo de demonstração
-- Links das documentações
-- Confirmação do usuário `soat-architecture` adicionado a todos os repositórios
-
----
-
-## Links dos Repositórios
+## Links
 
 ### Repositórios do Projeto
 
@@ -141,8 +97,3 @@ Documentação completa do modelo relacional:
 | Andrey Hurpia da Rocha | 366440 | [@ahrocha](https://github.com/ahrocha) |
 | Rodrigo Tavares Franco Junior | 366199 | [@rodrigo_juniorj](https://github.com/rodrigo_juniorj) |
 | Vinicius Marinheiro Rodrigues Silva | 365289 | [@marinheirovini](https://github.com/marinheirovini) |
-
----
-
-**Última atualização:** Janeiro de 2026  
-**Versão:** 1.0
