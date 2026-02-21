@@ -23,6 +23,7 @@
 6. [Atendimento dos requisitos do enunciado](#atendimento-dos-requisitos-do-enunciado)
 7. [Entregáveis e evidências](#entregáveis-e-evidências)
 8. [Próximos passos](#próximos-passos)
+9. [Compensação de pagamento na saga](#compensação-de-pagamento-na-saga)
 
 ---
 
@@ -81,6 +82,7 @@ Eventos observados na implementação atual:
 Para visão arquitetural detalhada da fase 4 (serviços, comunicação, saga, compensação e fluxo ponta a ponta), consultar:
 
 - [ARCHITECTURE.md](ARCHITECTURE.md)
+- [SAGA-COMPENSACAO-PAGAMENTO.md](SAGA-COMPENSACAO-PAGAMENTO.md)
 
 ---
 
@@ -133,6 +135,12 @@ Conforme o enunciado da fase, os entregáveis foram organizados em torno dos mic
 - manifestos Kubernetes por serviço (`k8s/`);
 - documentação de fluxo de pagamento e mensageria (ex.: diagrama no `MS-PAYMENT`);
 - endpoints e documentação técnica via Swagger em cada aplicação NestJS.
+
+## Compensação de pagamento na saga
+
+Foi adicionada uma documentação específica da compensação de saga para falhas de pagamento no `MS-PAYMENT`:
+
+- [SAGA-COMPENSACAO-PAGAMENTO.md](SAGA-COMPENSACAO-PAGAMENTO.md)
 
 ---
 
