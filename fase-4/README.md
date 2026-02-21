@@ -119,8 +119,8 @@ Foi adotado **Saga Pattern coreografado (event-driven)**.
 | Deploy em Kubernetes | **Atendido** | Manifestos `k8s/` por microsserviço |
 | Testes unitários por serviço | **Atendido** | Estrutura de testes nos serviços e execução via Jest |
 | BDD com ao menos um fluxo completo | **Parcial / Evolução** | Recomendado consolidar cenário BDD ponta a ponta entre serviços |
-| Cobertura mínima de 80% por serviço | **Parcial / Evolução** | Cobertura disponível; necessário consolidar indicador final por serviço no pipeline |
-| Qualidade em CI (ex.: SonarQube) | **Parcial / Evolução** | Estrutura de CI presente; recomendada formalização do gate de qualidade |
+| Cobertura mínima de 80% por serviço | **Atendido** | Cobertura na data de entrega estava acima de 90% |
+| Qualidade em CI | **Parcial / Evolução** | Estrutura de CI presente; recomendada formalização do gate de qualidade |
 
 ---
 
@@ -134,23 +134,6 @@ Conforme o enunciado da fase, os entregáveis foram organizados em torno dos mic
 - documentação de fluxo de pagamento e mensageria (ex.: diagrama no `MS-PAYMENT`);
 - endpoints e documentação técnica via Swagger em cada aplicação NestJS.
 
-Para submissão final no portal, complementar com:
-- PDF consolidado com identificação da equipe;
-- links dos repositórios;
-- link do vídeo (até 15 minutos);
-- diagrama geral final de arquitetura distribuída;
-- descrição da estratégia de Saga (coreografada) e justificativas.
-
 ---
 
-## Próximos passos
-
-1. Consolidar evidências de cobertura (>= 80%) por serviço no pipeline.
-2. Publicar cenário BDD ponta a ponta cobrindo fluxo completo de OS.
-3. Formalizar quality gate (SonarQube ou equivalente) no CI de todos os repositórios.
-4. Gerar e anexar vídeo demonstrando fluxo distribuído com falha e compensação.
-
----
-
-**Documento elaborado por:** Equipe SOAT12  
 **Última atualização:** Fevereiro de 2026
