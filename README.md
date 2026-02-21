@@ -38,6 +38,7 @@ Documentação da evolução para arquitetura distribuída, com foco em microsse
 Arquivos da fase 4:
 - [README.md](fase-4/README.md)
 - [ARCHITECTURE.md](fase-4/ARCHITECTURE.md)
+- [SAGA-COMPENSACAO-PAGAMENTO.md](fase-4/SAGA-COMPENSACAO-PAGAMENTO.md)
 
 ### [Fase 3 - Arquitetura Cloud-Native](fase-3/README.md)
 
