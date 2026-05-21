@@ -31,6 +31,13 @@ O projeto evolui por fases e mantém como objetivo comum:
 
 Este repositório contém a documentação centralizada do projeto SOAT12-FSMT, organizada por fases:
 
+### [Fase 5 - Hackathon Integrado (SOAT + IADT)](fase-5/README.md)
+
+Documentação da integração com IA para análise automatizada de diagramas de arquitetura, incluindo fluxo E2E, serviços, segurança e pendências priorizadas.
+
+Arquivos da fase 5:
+- [README.md](fase-5/README.md)
+
 ### [Fase 4 - Microsserviços e Saga Pattern](fase-4/README.md)
 
 Documentação da evolução para arquitetura distribuída, com foco em microsserviços e Saga Pattern.
