@@ -48,8 +48,25 @@ Fluxo principal do MVP:
 - Fase 4 (microsserviços + saga): ../fase-4/README.md
 - Requisitos da Fase 5: ./REQUISITOS.md
 
-## 3. Visão Arquitetural da Fase 5
+## 3. Instalação e execução do projeto localmente
 
+É necessário ter Docker instalado e em funcionamento.
+
+```
+git clone git@github.com:Rodrigojuniorj/hackathon-soat.git
+git clone git@github.com:Rodrigojuniorj/hackathon-soat-ai-service.git
+git clone git@github.com:Rodrigojuniorj/hackathon-soat-upload-service.git
+git clone git@github.com:Rodrigojuniorj/hackathon-soat-report-service.git
+git clone git@github.com:Rodrigojuniorj/hackathon-soat-processing-service.git
+git clone git@github.com:Rodrigojuniorj/hackathon-soat-front.git
+
+cd hackathon-soat
+docker compose -f docker-compose.local.yml up --build
+```
+
+Acesse http://localhost:8080/
+
+## 4. Visão Arquitetural da Fase 5
 A solução foi organizada em microsserviços com comunicação síncrona e assíncrona:
 
 - Comunicação síncrona: REST (upload e consulta de status/relatório).
@@ -90,15 +107,15 @@ Infraestrutura observada:
 - PostgreSQL, RabbitMQ e MinIO no ambiente integrado;
 - pipelines CI/CD por repositório com build, testes e deploy.
 
-## 4. Fluxo Funcional Atendido
+## 5. Fluxo Funcional Atendido
 
-### 4.1 Upload de diagrama
+### 5.1 Upload de diagrama
 
 - Endpoint: POST /uploads
 - Tipos aceitos: PNG, JPG, PDF
 - Resultado: analysisId gerado + status inicial RECEBIDO
 
-### 4.2 Status do processamento
+### 5.2 Status do processamento
 
 - Endpoint: GET /uploads/:id/status
 - Estados previstos no MVP:
@@ -107,7 +124,7 @@ Infraestrutura observada:
   - ANALISADO
   - ERRO
 
-### 4.3 Relatório técnico estruturado
+### 5.3 Relatório técnico estruturado
 
 - Endpoint: GET /reports/:analysisId
 - Conteúdo esperado:
@@ -116,7 +133,7 @@ Infraestrutura observada:
   - recomendações;
   - resumo técnico.
 
-### 4.4 Diagrama do fluxo da aplicação
+### 5.4 Diagrama do fluxo da aplicação
 
 ```mermaid
 flowchart LR
@@ -144,11 +161,11 @@ flowchart LR
     RS -->|GET /reports/:analysisId| F
 ```
 
-## 5. Pipeline de IA (IADT)
+## 6. Pipeline de IA (IADT)
 
 Abordagem implementada no projeto:
 
-- análise multimodal de diagramas (imagem e PDF) com LLM;
+- análise de diagramas (imagem e PDF) com LLM;
 - prompt com estrutura de saída obrigatória em JSON;
 - validação de formato e normalização de severidade/prioridade;
 - integração ao fluxo distribuído via mensageria (não isolado).
@@ -159,7 +176,7 @@ Tratamento de falhas de IA no fluxo:
 - persistência de mensagem de erro para rastreabilidade;
 - continuidade do controle transacional por status da análise.
 
-## 6. Segurança (Seção Obrigatória)
+## 7. Segurança
 
 Medidas de segurança identificadas/planejadas na solução:
 
@@ -177,9 +194,9 @@ Riscos e limitações que exigem evolução (detalhados em TODO.md):
 - fortalecimento dos quality gates e cobertura de testes;
 - evidência formal de isolamento de dados por serviço.
 
-## 7. Como Executar
+## 8. Como Executar
 
-## 7.1 Ambiente integrado
+## 8.1 Ambiente integrado
 
 No repositório orquestrador:
 
@@ -189,7 +206,7 @@ No repositório orquestrador:
 - Execução padrão:
   - docker compose up --build
 
-## 7.2 Endpoints úteis (ambiente local integrado)
+## 8.2 Endpoints úteis (ambiente local integrado)
 
 - Front-end: http://localhost:8080
 - Upload Service: http://localhost:8081
@@ -199,7 +216,7 @@ No repositório orquestrador:
 - RabbitMQ UI: http://localhost:15672
 - MinIO Console: http://localhost:9001
 
-## 8. Atendimentos e Aderência ao Enunciado
+## 9. Atendimentos e Aderência ao Enunciado
 
 Resumo de aderência geral ao enunciado da Fase 5:
 
@@ -212,7 +229,7 @@ Resumo de aderência geral ao enunciado da Fase 5:
 - Testes automatizados por serviço: parcialmente atendido (há gaps, ver TODO.md).
 - Segurança e governança de IA: parcialmente atendido (há gaps, ver TODO.md).
 
-## 9. Entregáveis da Fase 5
+## 10. Entregáveis da Fase 5
 
 - Código-fonte distribuído nos repositórios hackathon-soat*.
 - Dockerfiles e Docker Compose.
@@ -221,6 +238,6 @@ Resumo de aderência geral ao enunciado da Fase 5:
 - Documentação consolidada da fase (este README).
 - Mapa de pendências priorizado: TODO.md.
 
-## 10. Conclusão
+## 11. Conclusão
 
 A fase 5 foi implementada com fluxo funcional ponta a ponta para análise automática de diagramas, arquitetura distribuída e integração IA + sistema. Para elevar maturidade e robustez de produção, recomenda-se concluir os itens priorizados em TODO.md, com foco em segurança, qualidade de teste e governança da IA.
